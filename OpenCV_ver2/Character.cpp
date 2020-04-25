@@ -15,5 +15,5 @@ void character::drawBoundingBox() {
 	std::sort(setX.begin(), setX.end());
 	std::sort(setY.begin(), setY.end());
 
-	boundingBox = cv::Rect(setX.front(), setY.front(), std::abs(setX.front() - setX.back()), std::abs(setY.front() - setY.back()));
+	boundingBox = cv::Rect(setX.front()-3, setY.front()-3, std::abs(setX.front() - setX.back()) +6, std::abs(setY.front() - setY.back())+6 );
 }

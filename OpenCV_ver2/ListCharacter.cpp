@@ -86,8 +86,9 @@ void listCharacters::eliminateOutliers() {
 
 void listCharacters::drawAllBoundingBoxes(cv::Mat img) {
 	for (auto a = mapOfCharacter.begin(); a != mapOfCharacter.end(); ++a) {
-		rectangle(img, a->second.getBoundingBox(), cv::Scalar(255, 255, 255));
+		rectangle(img, a->second.getBoundingBox(), cv::Scalar(0, 0, 0));
 	}
+	cv::bitwise_not(img, img);
 	cv::imshow("Connected Components", img);
 	cv::waitKey(0);
 }

@@ -30,8 +30,9 @@ cv::Mat CVHelper::imageProcessing(cv::Mat image) {
 }
 
 listCharacters CVHelper::createListCharacter(cv::Mat img, int threshold) {
+	cv::Mat bw = threshold < 128 ? (img < threshold) : (img > threshold);
 	cv::Mat labelImage(img.size(), CV_32S);
-	int nLabels = connectedComponents(threshold, labelImage, 4);
+	int nLabels = connectedComponents(bw, labelImage, 4);
 	listCharacters newList = listCharacters();
 
 	std::vector<cv::Vec3b> colors(nLabels);
