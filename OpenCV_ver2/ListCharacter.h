@@ -25,4 +25,5 @@ public:
 	//void calculateMean_Point();
 	void calculateMean_Size();
 	void eliminateOutliers();
+	void drawAllBoundingBoxes(cv::Mat);
 };

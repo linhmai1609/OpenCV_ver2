@@ -84,3 +84,11 @@ void listCharacters::eliminateOutliers() {
 	}
 }
 
+void listCharacters::drawAllBoundingBoxes(cv::Mat img) {
+	for (auto a = mapOfCharacter.begin(); a != mapOfCharacter.end(); ++a) {
+		rectangle(img, a->second.getBoundingBox(), cv::Scalar(255, 255, 255));
+	}
+	cv::imshow("Connected Components", img);
+	cv::waitKey(0);
+}
+

@@ -15,6 +15,4 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 
-extern cv::Mat img;
-
 int main();

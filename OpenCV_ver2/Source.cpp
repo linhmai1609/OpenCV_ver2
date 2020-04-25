@@ -1,4 +1,6 @@
 #include "Header.h"
+#include "ListCharacter.h"
+#include "CVHelper.h"
 
 int main() {
 	std::set<int> a= { 1,2,3 };
