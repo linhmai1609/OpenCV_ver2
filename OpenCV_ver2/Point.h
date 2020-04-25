@@ -1,6 +1,5 @@
 #pragma once
 #include"Header.h"
-
 #include "Character.h"
 
 class point {

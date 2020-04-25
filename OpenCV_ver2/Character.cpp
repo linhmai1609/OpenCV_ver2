@@ -1,4 +1,4 @@
-#include "Header.h"
+﻿#include "Character.h"
 
 //Character class method
 void character::addPoint(int x, int y) {

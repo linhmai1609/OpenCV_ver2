@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "ListCharacter.h"
 
 //ListCharacters class method
 void listCharacters::addNewCharacter(int position, character c) {
